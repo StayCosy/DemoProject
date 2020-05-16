@@ -11,6 +11,7 @@ public class DemoApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(DemoApplication.class, args);
+        // Spi Demo 测试
         ServiceLoader<ISpi> spis = ServiceLoader.load(ISpi.class);
         for(ISpi iSpi : spis){
             iSpi.invoke();
